@@ -16,10 +16,10 @@ async function onPress(e) {
     const{ data2,error2 } = await supabase
     .from('information')
     .select('food_menu')
-    .match({id: 1})
+    .match({id: 1});
 }
 
 function hello(){
 const{data, error} = onPress();
-console.log(data)
+console.log(data[0]);
 }
