@@ -12,4 +12,14 @@ async function onPress(e) {
             { food_menu: text }
         ])
     console.log(data)
+
+    const{ data2,error2 } = await supabase
+    .from('information')
+    .select('food_menu')
+    .match({id: 1})
+}
+
+function hello(){
+const{data, error} = onPress();
+console.log(data)
 }
